@@ -44,10 +44,8 @@ rm -rf html/.{doctrees,buildinfo}
 
 %files
 %doc html README.rst LICENSE
-%{_bindir}/
 %{_bindir}/oslo_debug_helper.sh
 %{python2_sitelib}/%{pypi_name}
-%{python2_sitelib}/
 %{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 
 %changelog
