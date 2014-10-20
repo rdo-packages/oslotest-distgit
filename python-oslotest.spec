@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -16,6 +16,11 @@ BuildRequires:  python-pbr
 BuildRequires:  python-sphinx
 BuildRequires:  python-oslo-sphinx
 
+Requires: python-six
+Requires: python-testrepository
+Requires: python-testscenarios
+Requires: python-mock
+Requires: python-mox
 
 %description
 OpenStack test framework and test fixtures.
@@ -49,5 +54,8 @@ rm -rf html/.{doctrees,buildinfo}
 %{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 
 %changelog
+* Mon Oct 20 2014 Alan Pevec <apevec@redhat.com> - 1.1.0-2
+- add dependencies
+
 * Mon Oct 20 2014 Alan Pevec <apevec@redhat.com> - 1.1.0-1
 - Initial package.
