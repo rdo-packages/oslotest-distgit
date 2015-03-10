@@ -14,7 +14,7 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-oslo-sphinx >= 2.2.0
 
 Requires: python-six
 Requires: python-testrepository
@@ -30,9 +30,6 @@ OpenStack test framework and test fixtures.
 %setup -q -n %{pypi_name}-%{version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
-
-# make doc build compatible with python-oslo-sphinx RPM
-sed -i 's/oslosphinx/oslo.sphinx/' doc/source/conf.py
 
 
 %build
