@@ -2,8 +2,8 @@
 %global pypi_name oslotest
 
 Name:           python-%{pypi_name}
-Version:        1.1.0
-Release:        3%{?dist}
+Version:        1.5.1
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -20,7 +20,7 @@ Requires: python-six
 Requires: python-testrepository
 Requires: python-testscenarios
 Requires: python-mock
-Requires: python-mox
+Requires: python-mox3
 
 %description
 OpenStack test framework and test fixtures.
@@ -45,8 +45,11 @@ rm -rf html/.{doctrees,buildinfo}
 
 
 %files
+
 %doc html README.rst LICENSE
-%{_bindir}/oslo_debug_helper.sh
+%{_bindir}/oslo_debug_helper
+%{_bindir}/oslo_run_cross_tests
+%{_bindir}/oslo_run_pre_release_tests
 %{python2_sitelib}/%{pypi_name}
 %{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 
