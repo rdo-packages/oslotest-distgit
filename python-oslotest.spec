@@ -2,7 +2,7 @@
 %global pypi_name oslotest
 
 Name:           python-%{pypi_name}
-Version:        1.5.1
+Version:        1.10.0
 Release:        1%{?dist}
 Summary:        OpenStack test framework
 
@@ -54,6 +54,9 @@ rm -rf html/.{doctrees,buildinfo}
 %{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 
 %changelog
+* Thu Sep 03 2015 Alan Pevec <alan.pevec@redhat.com> 1.10.0-1
+- Update to upstream 1.10.0
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
