@@ -132,7 +132,7 @@ rm -rf .testrepository
 %endif
 
 %changelog
-* Wed Sep 02 2015 Lukas Bezdicka <lbezdick@redhat.com> - 1.10.0-2
+* Fri Sep 04 2015 Lukas Bezdicka <lbezdick@redhat.com> - 1.10.0-2
 - change spec according to new python3 guidelines
 
 * Thu Sep 03 2015 Alan Pevec <alan.pevec@redhat.com> 1.10.0-1
