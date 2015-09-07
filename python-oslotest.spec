@@ -29,7 +29,6 @@ BuildRequires:  python-sphinx
 BuildRequires:  python-oslo-sphinx >= 2.2.0
 
 # test requires
-BuildRequires:  python-hacking
 BuildRequires:  python-six
 BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
@@ -57,7 +56,6 @@ BuildRequires:  python3-sphinx
 BuildRequires:  python3-oslo-sphinx >= 2.2.0
 
 # test requires
-BuildRequires:  python3-hacking
 BuildRequires:  python3-six
 BuildRequires:  python3-testrepository
 BuildRequires:  python3-testscenarios
