@@ -118,7 +118,7 @@ rm -rf .testrepository
 %{_bindir}/oslo_run_pre_release_tests
 %{_bindir}/oslo_debug_helper
 %{python2_sitelib}/%{pypi_name}
-%{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python2_sitelib}/%{pypi_name}*.egg-info
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
@@ -128,7 +128,7 @@ rm -rf .testrepository
 %{_bindir}/python3-oslo_run_pre_release_tests
 %{_bindir}/python3-oslo_debug_helper
 %{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python3_sitelib}/%{pypi_name}*.egg-info
 %endif
 
 %changelog
