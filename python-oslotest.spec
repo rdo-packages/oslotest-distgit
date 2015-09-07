@@ -1,12 +1,14 @@
 %global pypi_name oslotest
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 %if 0%{?fedora}
 %global with_python3 1
 %endif
 
 Name:           python-%{pypi_name}
-Version:        1.10.0
-Release:        2%{?dist}
+Version:        XXX
+Release:        XXX
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -73,7 +75,7 @@ OpenStack test framework and test fixtures.
 %endif
 
 %prep
-%setup -q -n %{pypi_name}-%{version}
+%setup -q -n %{pypi_name}-%{upstream_version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
@@ -132,17 +134,3 @@ rm -rf .testrepository
 %endif
 
 %changelog
-* Fri Sep 04 2015 Lukas Bezdicka <lbezdick@redhat.com> - 1.10.0-2
-- change spec according to new python3 guidelines
-
-* Thu Sep 03 2015 Alan Pevec <alan.pevec@redhat.com> 1.10.0-1
-- Update to upstream 1.10.0
-
-* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1.0-3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
-
-* Mon Oct 20 2014 Alan Pevec <apevec@redhat.com> - 1.1.0-2
-- add dependencies
-
-* Mon Oct 20 2014 Alan Pevec <apevec@redhat.com> - 1.1.0-1
-- Initial package.
