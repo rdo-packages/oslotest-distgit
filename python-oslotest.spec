@@ -74,8 +74,6 @@ OpenStack test framework and test fixtures.
 
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
-# Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
 
 # let RPM handle deps
 rm -rf {test-,}requirements.txt
