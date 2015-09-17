@@ -5,8 +5,8 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        1.10.0
-Release:        2%{?dist}
+Version:        1.11.0
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -132,6 +132,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Fri Sep 18 2015 Alan Pevec <alan.pevec@redhat.com> 1.11.0-1
+- Update to upstream 1.11.0
+
 * Fri Sep 04 2015 Lukas Bezdicka <lbezdick@redhat.com> - 1.10.0-2
 - change spec according to new python3 guidelines
 
