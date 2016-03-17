@@ -7,8 +7,8 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        2.1.0
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -133,3 +133,6 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Thu Mar 17 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.1.0-
+- Update to 2.1.0
+
