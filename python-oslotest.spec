@@ -1,12 +1,14 @@
 %global pypi_name oslotest
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 %if 0%{?fedora}
 %global with_python3 1
 %endif
 
 Name:           python-%{pypi_name}
-Version:        1.11.0
-Release:        3%{?dist}
+Version:        2.1.0
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -27,14 +29,14 @@ BuildRequires:  python-sphinx
 BuildRequires:  python-oslo-sphinx >= 2.2.0
 
 # test requires
-BuildRequires:  python-hacking
 BuildRequires:  python-six
 BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
 BuildRequires:  python-mock
 BuildRequires:  python-mox3
+BuildRequires:  python-debtcollector
 
-
+Requires: python-debtcollector
 Requires: python-six
 Requires: python-testrepository
 Requires: python-testscenarios
@@ -55,27 +57,26 @@ BuildRequires:  python3-sphinx
 BuildRequires:  python3-oslo-sphinx >= 2.2.0
 
 # test requires
-BuildRequires:  python3-hacking
 BuildRequires:  python3-six
 BuildRequires:  python3-testrepository
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-mock
 BuildRequires:  python3-mox3
+BuildRequires:  python3-debtcollector
 
 Requires: python3-six
 Requires: python3-testrepository
 Requires: python3-testscenarios
 Requires: python3-mock
 Requires: python3-mox3
+Requires: python3-debtcollector
 
 %description -n python3-%{pypi_name}
 OpenStack test framework and test fixtures.
 %endif
 
 %prep
-%setup -q -n %{pypi_name}-%{version}
-# Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
+%setup -q -n %{pypi_name}-%{upstream_version}
 
 # let RPM handle deps
 rm -rf {test-,}requirements.txt
@@ -118,7 +119,7 @@ rm -rf .testrepository
 %{_bindir}/oslo_run_pre_release_tests
 %{_bindir}/oslo_debug_helper
 %{python2_sitelib}/%{pypi_name}
-%{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python2_sitelib}/%{pypi_name}*.egg-info
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
@@ -128,30 +129,10 @@ rm -rf .testrepository
 %{_bindir}/python3-oslo_run_pre_release_tests
 %{_bindir}/python3-oslo_debug_helper
 %{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python3_sitelib}/%{pypi_name}*.egg-info
 %endif
 
 %changelog
-* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.11.0-3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+* Thu Mar 17 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.1.0-
+- Update to 2.1.0
 
-* Tue Nov 10 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.11.0-2
-- Rebuilt for https://fedoraproject.org/wiki/Changes/python3.5
-
-* Fri Sep 18 2015 Alan Pevec <alan.pevec@redhat.com> 1.11.0-1
-- Update to upstream 1.11.0
-
-* Fri Sep 04 2015 Lukas Bezdicka <lbezdick@redhat.com> - 1.10.0-2
-- change spec according to new python3 guidelines
-
-* Thu Sep 03 2015 Alan Pevec <alan.pevec@redhat.com> 1.10.0-1
-- Update to upstream 1.10.0
-
-* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1.0-3
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
-
-* Mon Oct 20 2014 Alan Pevec <apevec@redhat.com> - 1.1.0-2
-- add dependencies
-
-* Mon Oct 20 2014 Alan Pevec <apevec@redhat.com> - 1.1.0-1
-- Initial package.
