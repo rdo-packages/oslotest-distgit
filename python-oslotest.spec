@@ -7,13 +7,13 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        2.10.0
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
 URL:            http://launchpad.net/oslo
-Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 %description
@@ -133,3 +133,6 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Fri Sep 02 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.10.0-1
+- Update to 2.10.0
+
