@@ -7,7 +7,7 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        2.1.0
+Version:        2.4.0
 Release:        1%{?dist}
 Summary:        OpenStack test framework
 
@@ -133,6 +133,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Tue Sep 06 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.4.0-1
+- Update to 2.4.0
+
 * Thu Mar 17 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.1.0-
 - Update to 2.1.0
 
