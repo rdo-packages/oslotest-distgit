@@ -37,11 +37,16 @@ BuildRequires:  python-mox3
 BuildRequires:  python-debtcollector
 
 Requires: python-debtcollector
+Requires: python-fixtures
+Requires: python-os-client-config
 Requires: python-six
+Requires: python-subunit
 Requires: python-testrepository
 Requires: python-testscenarios
+Requires: python-testtools
 Requires: python-mock
 Requires: python-mox3
+
 
 %description -n python2-%{pypi_name}
 OpenStack test framework and test fixtures.
@@ -64,12 +69,16 @@ BuildRequires:  python3-mock
 BuildRequires:  python3-mox3
 BuildRequires:  python3-debtcollector
 
+Requires: python3-debtcollector
+Requires: python3-fixtures
+Requires: python3-os-client-config
 Requires: python3-six
+Requires: python3-subunit
 Requires: python3-testrepository
 Requires: python3-testscenarios
+Requires: python3-testtools
 Requires: python3-mock
 Requires: python3-mox3
-Requires: python3-debtcollector
 
 %description -n python3-%{pypi_name}
 OpenStack test framework and test fixtures.
