@@ -38,7 +38,9 @@ BuildRequires:  python-debtcollector
 
 Requires: python-debtcollector
 Requires: python-fixtures
-Requires: python-os-client-config
+# os-client-config is a dependency but it's circular dependency making it
+# imposible to bootstrap the repo.
+#Requires: python-os-client-config
 Requires: python-six
 Requires: python-subunit
 Requires: python-testrepository
@@ -71,7 +73,7 @@ BuildRequires:  python3-debtcollector
 
 Requires: python3-debtcollector
 Requires: python3-fixtures
-Requires: python3-os-client-config
+#Requires: python3-os-client-config
 Requires: python3-six
 Requires: python3-subunit
 Requires: python3-testrepository
