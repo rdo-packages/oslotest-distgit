@@ -16,6 +16,24 @@
       "revId": "d787a4260731419e6a56bdb8e569284686b117d3",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_0ad87dee",
+        "filename": "python-oslotest.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-02-08T03:50:05Z",
+      "side": 1,
+      "message": "It is used by https://github.com/openstack/oslotest/blob/master/oslotest/functional.py and it will break in projects using it. Quick search in github.com/openstack did not find any usage though.",
+      "parentUuid": "baada198_6a8f3924",
+      "revId": "d787a4260731419e6a56bdb8e569284686b117d3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
