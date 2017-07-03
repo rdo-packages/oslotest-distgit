@@ -25,8 +25,9 @@ Summary:        OpenStack test framework
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
+BuildRequires:  git
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx >= 2.2.0
+BuildRequires:  python-openstackdocstheme
 
 # test requires
 BuildRequires:  python-six
@@ -61,7 +62,7 @@ Summary:        OpenStack test framework
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 BuildRequires:  python3-sphinx
-BuildRequires:  python3-oslo-sphinx >= 2.2.0
+BuildRequires:  python3-openstackdocstheme
 
 # test requires
 BuildRequires:  python3-six
@@ -87,7 +88,7 @@ OpenStack test framework and test fixtures.
 %endif
 
 %prep
-%setup -q -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 # let RPM handle deps
 rm -rf {test-,}requirements.txt
@@ -99,9 +100,9 @@ rm -rf {test-,}requirements.txt
 %endif
 
 # generate html docs
-sphinx-build doc/source html
+%{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
+rm -rf doc/build/html/.{doctrees,buildinfo}
 
 %install
 %if 0%{?with_python3}
@@ -124,7 +125,7 @@ rm -rf .testrepository
 %endif
 
 %files -n python2-%{pypi_name}
-%doc html README.rst
+%doc doc/build/html README.rst
 %license LICENSE
 %{_bindir}/oslo_run_cross_tests
 %{_bindir}/oslo_run_pre_release_tests
@@ -134,7 +135,7 @@ rm -rf .testrepository
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
-%doc html README.rst
+%doc doc/build/html README.rst
 %license LICENSE
 %{_bindir}/python3-oslo_run_cross_tests
 %{_bindir}/python3-oslo_run_pre_release_tests
