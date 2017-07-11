@@ -7,7 +7,7 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        2.10.0
+Version:        2.10.1
 Release:        1%{?dist}
 Summary:        OpenStack test framework
 
@@ -133,6 +133,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Tue Jul 11 2017 rdo-trunk <javier.pena@redhat.com> 2.10.1-1
+- Update to 2.10.1
+
 * Fri Sep 02 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.10.0-1
 - Update to 2.10.0
 
