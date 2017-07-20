@@ -28,6 +28,8 @@ BuildRequires:  python-pbr
 BuildRequires:  git
 BuildRequires:  python-sphinx
 BuildRequires:  python-openstackdocstheme
+BuildRequires:  python-os-client-config
+BuildRequires:  python-oslo-config
 
 # test requires
 BuildRequires:  python-six
@@ -61,8 +63,6 @@ Summary:        OpenStack test framework
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
-BuildRequires:  python3-sphinx
-BuildRequires:  python3-openstackdocstheme
 
 # test requires
 BuildRequires:  python3-six
