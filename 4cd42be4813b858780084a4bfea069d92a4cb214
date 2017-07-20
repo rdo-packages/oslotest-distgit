@@ -16,6 +16,24 @@
       "revId": "4cd42be4813b858780084a4bfea069d92a4cb214",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa7fdbe_fd2689b9",
+        "filename": "python-oslotest.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2017-07-20T11:59:03Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "9aa7fdbe_5d0f9530",
+      "revId": "4cd42be4813b858780084a4bfea069d92a4cb214",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
