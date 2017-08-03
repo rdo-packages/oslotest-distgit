@@ -6,6 +6,12 @@
 %global with_python3 1
 %endif
 
+%if 0%{?repo_bootstrap} == 0
+%global with_doc 1
+%else
+%global with_doc 0
+%endif
+
 Name:           python-%{pypi_name}
 Version:        XXX
 Release:        XXX
@@ -27,10 +33,12 @@ BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  git
 # doc requires
+%if 0%{?with_doc}
 BuildRequires:  python-sphinx
 BuildRequires:  python-openstackdocstheme
 BuildRequires:  python-os-client-config
 BuildRequires:  python-oslo-config
+%endif
 
 # test requires
 BuildRequires:  python-six
@@ -100,10 +108,12 @@ rm -rf {test-,}requirements.txt
 %{__python3} setup.py build
 %endif
 
+%if 0%{?with_doc}
 # generate html docs
 %{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 
 %install
 %if 0%{?with_python3}
@@ -126,7 +136,9 @@ rm -rf .testrepository
 %endif
 
 %files -n python2-%{pypi_name}
+%if 0%{?with_doc}
 %doc doc/build/html README.rst
+%endif
 %license LICENSE
 %{_bindir}/oslo_run_cross_tests
 %{_bindir}/oslo_run_pre_release_tests
@@ -136,7 +148,9 @@ rm -rf .testrepository
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
+%if 0%{?with_doc}
 %doc doc/build/html README.rst
+%endif
 %license LICENSE
 %{_bindir}/python3-oslo_run_cross_tests
 %{_bindir}/python3-oslo_run_pre_release_tests
