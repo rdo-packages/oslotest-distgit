@@ -48,7 +48,7 @@ BuildRequires:  python-mock
 BuildRequires:  python-mox3
 BuildRequires:  python-debtcollector
 
-Requires: python-debtcollector
+Requires: python-debtcollector >= 1.2.0
 Requires: python-fixtures
 # os-client-config is a dependency but it's circular dependency making it
 # imposible to bootstrap the repo.
@@ -59,7 +59,7 @@ Requires: python-testrepository
 Requires: python-testscenarios
 Requires: python-testtools
 Requires: python-mock
-Requires: python-mox3
+Requires: python-mox3 >= 0.7.0
 
 
 %description -n python2-%{pypi_name}
@@ -81,7 +81,7 @@ BuildRequires:  python3-mock
 BuildRequires:  python3-mox3
 BuildRequires:  python3-debtcollector
 
-Requires: python3-debtcollector
+Requires: python3-debtcollector >= 1.2.0
 Requires: python3-fixtures
 #Requires: python3-os-client-config
 Requires: python3-six
@@ -90,7 +90,7 @@ Requires: python3-testrepository
 Requires: python3-testscenarios
 Requires: python3-testtools
 Requires: python3-mock
-Requires: python3-mox3
+Requires: python3-mox3 >= 0.7.0
 
 %description -n python3-%{pypi_name}
 OpenStack test framework and test fixtures.
