@@ -82,6 +82,7 @@ BuildRequires:  python3-testscenarios
 BuildRequires:  python3-mock
 BuildRequires:  python3-mox3
 BuildRequires:  python3-debtcollector
+BuildRequires:  openstack-macros
 
 Requires: python3-debtcollector >= 1.2.0
 Requires: python3-fixtures
@@ -102,7 +103,7 @@ Requires: python3-mox3 >= 0.7.0
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 # let RPM handle deps
-rm -rf {test-,}requirements.txt
+%py_req_cleanup
 
 %build
 %{__python2} setup.py build
