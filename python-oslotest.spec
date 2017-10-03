@@ -12,6 +12,8 @@
 %global with_doc 0
 %endif
 
+%global common_desc OpenStack test framework and test fixtures.
+
 Name:           python-%{pypi_name}
 Version:        XXX
 Release:        XXX
@@ -23,7 +25,7 @@ Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{versi
 BuildArch:      noarch
 
 %description
-OpenStack test framework and test fixtures.
+%{common_desc}
 
 %package -n python2-%{pypi_name}
 Summary:        OpenStack test framework
@@ -63,7 +65,7 @@ Requires: python-mox3 >= 0.7.0
 
 
 %description -n python2-%{pypi_name}
-OpenStack test framework and test fixtures.
+%{common_desc}
 
 %if 0%{?with_python3}
 %package -n python3-%{pypi_name}
@@ -93,7 +95,7 @@ Requires: python3-mock
 Requires: python3-mox3 >= 0.7.0
 
 %description -n python3-%{pypi_name}
-OpenStack test framework and test fixtures.
+%{common_desc}
 %endif
 
 %prep
