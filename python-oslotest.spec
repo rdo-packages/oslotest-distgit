@@ -34,13 +34,6 @@ Summary:        OpenStack test framework
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  git
-# doc requires
-%if 0%{?with_doc}
-BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
-BuildRequires:  python-os-client-config
-BuildRequires:  python-oslo-config
-%endif
 
 # test requires
 BuildRequires:  python-six
@@ -98,6 +91,19 @@ Requires: python3-mox3 >= 0.7.0
 %{common_desc}
 %endif
 
+%if 0%{?with_doc}
+%package -n python-%{pypi_name}-doc
+Summary:        Documentation for the OpenStack test framework
+
+BuildRequires:  python-sphinx
+BuildRequires:  python-openstackdocstheme
+BuildRequires:  python-os-client-config
+BuildRequires:  python-oslo-config
+
+%description -n python-%{pypi_name}-doc
+%{common_desc} Documentation
+%endif
+
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 
@@ -138,9 +144,6 @@ rm -rf .testrepository
 %endif
 
 %files -n python2-%{pypi_name}
-%if 0%{?with_doc}
-%doc doc/build/html README.rst
-%endif
 %license LICENSE
 %{_bindir}/oslo_run_cross_tests
 %{_bindir}/oslo_run_pre_release_tests
@@ -150,15 +153,19 @@ rm -rf .testrepository
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
-%if 0%{?with_doc}
-%doc doc/build/html README.rst
-%endif
 %license LICENSE
 %{_bindir}/python3-oslo_run_cross_tests
 %{_bindir}/python3-oslo_run_pre_release_tests
 %{_bindir}/python3-oslo_debug_helper
 %{python3_sitelib}/%{pypi_name}
 %{python3_sitelib}/%{pypi_name}*.egg-info
+%endif
+
+%if 0%{?with_doc}
+%files -n python-%{pypi_name}-doc
+%license LICENSE
+%doc doc/build/html
+%doc README.rst
 %endif
 
 %changelog
