@@ -35,6 +35,8 @@ Summary:        OpenStack test framework
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
+BuildRequires:  python-setuptools
+
 
 # test requires
 BuildRequires:  python-six
@@ -68,6 +70,7 @@ Summary:        OpenStack test framework
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
+BuildRequires:  python3-setuptools
 
 # test requires
 BuildRequires:  python3-six
