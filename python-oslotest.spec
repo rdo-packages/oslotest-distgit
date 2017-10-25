@@ -24,6 +24,8 @@ URL:            http://launchpad.net/oslo
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
+BuildRequires:  git
+
 %description
 %{common_desc}
 
@@ -33,7 +35,6 @@ Summary:        OpenStack test framework
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
-BuildRequires:  git
 
 # test requires
 BuildRequires:  python-six
