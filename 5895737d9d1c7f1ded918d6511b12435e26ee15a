@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_d811e4ad",
+        "filename": "python-oslotest.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2017-10-26T04:46:56Z",
+      "side": 1,
+      "message": "Duplicated",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 168,
+        "endChar": 15
+      },
+      "revId": "5895737d9d1c7f1ded918d6511b12435e26ee15a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
