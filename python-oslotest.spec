@@ -14,7 +14,7 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        2.17.0
+Version:        2.17.1
 Release:        1%{?dist}
 Summary:        OpenStack test framework
 
@@ -161,6 +161,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Tue Nov 21 2017 RDO <dev@lists.rdoproject.org> 2.17.1-1
+- Update to 2.17.1
+
 * Fri Aug 11 2017 Alfredo Moralejo <amoralej@redhat.com> 2.17.0-1
 - Update to 2.17.0
 
