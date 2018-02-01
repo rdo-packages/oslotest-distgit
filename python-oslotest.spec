@@ -34,30 +34,36 @@ Summary:        OpenStack test framework
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
-BuildRequires:  python-setuptools
+BuildRequires:  python2-pbr
+BuildRequires:  python2-setuptools
 
 
 # test requires
-BuildRequires:  python-six
+BuildRequires:  python2-six
+BuildRequires:  python2-mock
+BuildRequires:  python2-mox3
+BuildRequires:  python2-debtcollector
+%if 0%{?fedora} > 0
+BuildRequires:  python2-testrepository
+%else
 BuildRequires:  python-testrepository
-BuildRequires:  python-testscenarios
-BuildRequires:  python-mock
-BuildRequires:  python-mox3
-BuildRequires:  python-debtcollector
+%endif
 
-Requires: python-debtcollector >= 1.2.0
-Requires: python-fixtures
+Requires: python2-debtcollector >= 1.2.0
+Requires: python2-fixtures
 # os-client-config is a dependency but it's circular dependency making it
 # imposible to bootstrap the repo.
-#Requires: python-os-client-config
-Requires: python-six
-Requires: python-subunit
+#Requires: python2-os-client-config
+Requires: python2-six
+Requires: python2-subunit
+Requires: python2-testtools
+Requires: python2-mock
+Requires: python2-mox3 >= 0.7.0
+%if 0%{?fedora} > 0
+Requires: python2-testrepository
+%else
 Requires: python-testrepository
-Requires: python-testscenarios
-Requires: python-testtools
-Requires: python-mock
-Requires: python-mox3 >= 0.7.0
+%endif
 
 
 %description -n python2-%{pypi_name}
@@ -75,7 +81,6 @@ BuildRequires:  python3-setuptools
 # test requires
 BuildRequires:  python3-six
 BuildRequires:  python3-testrepository
-BuildRequires:  python3-testscenarios
 BuildRequires:  python3-mock
 BuildRequires:  python3-mox3
 BuildRequires:  python3-debtcollector
@@ -86,7 +91,6 @@ Requires: python3-fixtures
 Requires: python3-six
 Requires: python3-subunit
 Requires: python3-testrepository
-Requires: python3-testscenarios
 Requires: python3-testtools
 Requires: python3-mock
 Requires: python3-mox3 >= 0.7.0
