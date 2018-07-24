@@ -43,11 +43,7 @@ BuildRequires:  python2-six
 BuildRequires:  python2-mock
 BuildRequires:  python2-mox3
 BuildRequires:  python2-debtcollector
-%if 0%{?fedora} > 0
-BuildRequires:  python2-testrepository
-%else
-BuildRequires:  python-testrepository
-%endif
+BuildRequires:  python2-stestr
 
 Requires: python2-debtcollector >= 1.2.0
 Requires: python2-fixtures
@@ -59,11 +55,7 @@ Requires: python2-subunit
 Requires: python2-testtools
 Requires: python2-mock
 Requires: python2-mox3 >= 0.7.0
-%if 0%{?fedora} > 0
-Requires: python2-testrepository
-%else
-Requires: python-testrepository
-%endif
+Requires: python2-stestr
 
 
 %description -n python2-%{pypi_name}
@@ -80,7 +72,7 @@ BuildRequires:  python3-setuptools
 
 # test requires
 BuildRequires:  python3-six
-BuildRequires:  python3-testrepository
+BuildRequires:  python3-stestr
 BuildRequires:  python3-mock
 BuildRequires:  python3-mox3
 BuildRequires:  python3-debtcollector
@@ -90,7 +82,7 @@ Requires: python3-fixtures
 #Requires: python3-os-client-config
 Requires: python3-six
 Requires: python3-subunit
-Requires: python3-testrepository
+Requires: python3-stestr
 Requires: python3-testtools
 Requires: python3-mock
 Requires: python3-mox3 >= 0.7.0
@@ -146,8 +138,6 @@ mv %{buildroot}%{_bindir}/oslo_debug_helper \
 %check
 %{__python2} setup.py test
 %if 0%{?with_python3}
-# cleanup testrepository before running again
-rm -rf .testrepository
 %{__python3} setup.py test
 %endif
 
