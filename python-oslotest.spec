@@ -44,14 +44,18 @@ BuildRequires:  python2-mock
 BuildRequires:  python2-mox3
 BuildRequires:  python2-debtcollector
 BuildRequires:  python2-stestr
+%if 0%{?repo_bootstrap} == 0
 BuildRequires:  python2-os-client-config
 BuildRequires:  python2-oslo-config
+%endif
 
 Requires: python2-debtcollector >= 1.2.0
 Requires: python2-fixtures
 # os-client-config is a dependency but it's circular dependency making it
 # imposible to bootstrap the repo.
-#Requires: python2-os-client-config
+%if 0%{?repo_bootstrap} == 0
+Requires: python2-os-client-config
+%endif
 Requires: python2-six
 Requires: python2-subunit
 Requires: python2-testtools
@@ -78,12 +82,16 @@ BuildRequires:  python3-stestr
 BuildRequires:  python3-mock
 BuildRequires:  python3-mox3
 BuildRequires:  python3-debtcollector
+%if 0%{?repo_bootstrap} == 0
 BuildRequires:  python3-os-client-config
 BuildRequires:  python3-oslo-config
+%endif
 
 Requires: python3-debtcollector >= 1.2.0
 Requires: python3-fixtures
-#Requires: python3-os-client-config
+%if 0%{?repo_bootstrap} == 0
+Requires: python3-os-client-config
+%endif
 Requires: python3-six
 Requires: python3-subunit
 Requires: python3-stestr
