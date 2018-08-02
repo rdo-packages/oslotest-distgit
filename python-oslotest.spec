@@ -6,6 +6,8 @@
 %global with_python3 1
 %endif
 
+%global repo_bootstrap 1
+
 %if 0%{?repo_bootstrap} == 0
 %global with_doc 1
 %else
@@ -15,8 +17,8 @@
 %global common_desc OpenStack test framework and test fixtures.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        3.6.0
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -179,3 +181,6 @@ mv %{buildroot}%{_bindir}/oslo_debug_helper \
 %endif
 
 %changelog
+* Thu Aug 02 2018 RDO <dev@lists.rdoproject.org> 3.6.0-1
+- Update to 3.6.0
+
