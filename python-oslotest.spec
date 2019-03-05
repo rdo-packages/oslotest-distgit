@@ -60,7 +60,7 @@ Requires: python2-six
 Requires: python2-subunit
 Requires: python2-testtools
 Requires: python2-mock
-Requires: python2-mox3 >= 0.7.0
+Requires: python2-mox3 >= 0.20.0
 Requires: python2-stestr
 
 
@@ -97,7 +97,7 @@ Requires: python3-subunit
 Requires: python3-stestr
 Requires: python3-testtools
 Requires: python3-mock
-Requires: python3-mox3 >= 0.7.0
+Requires: python3-mox3 >= 0.20.0
 
 %description -n python3-%{pypi_name}
 %{common_desc}
