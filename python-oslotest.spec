@@ -1,5 +1,6 @@
 %global pypi_name oslotest
-
+# Remove after train bootstrapping is completed
+%global repo_bootstrap 1
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %if 0%{?fedora} || 0%{?rhel} > 7
@@ -15,8 +16,8 @@
 %global common_desc OpenStack test framework and test fixtures.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        3.8.1
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -179,3 +180,6 @@ mv %{buildroot}%{_bindir}/oslo_debug_helper \
 %endif
 
 %changelog
+* Tue Sep 17 2019 RDO <dev@lists.rdoproject.org> 3.8.1-1
+- Update to 3.8.1
+
