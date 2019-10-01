@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6c118e71_284b513f",
+        "filename": "python-oslotest.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-10-01T16:40:03Z",
+      "side": 0,
+      "message": "We are losing this binaries using non-standard prefix convention. I\u0027m fine with it. As the regular -%{pyver} never existed here, let\u0027s not add it.",
+      "range": {
+        "startLine": 167,
+        "startChar": 11,
+        "endLine": 167,
+        "endChar": 39
+      },
+      "revId": "0115c800afc873b23fb837613b4c877c0f398b98",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
