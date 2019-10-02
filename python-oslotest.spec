@@ -92,7 +92,7 @@ BuildRequires:  python%{pyver}-openstackdocstheme
 rm -rf {test-,}requirements.txt
 
 %build
-%{pyver_bin} setup.py build
+%{pyver_build}
 
 %if 0%{?with_doc}
 # generate html docs
