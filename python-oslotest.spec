@@ -80,6 +80,7 @@ Summary:        Documentation for the OpenStack test framework
 
 BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
 
 %description -n python-%{pypi_name}-doc
 %{common_desc} Documentation
@@ -96,7 +97,7 @@ rm -rf {test-,}requirements.txt
 
 %if 0%{?with_doc}
 # generate html docs
-%{pyver_bin} setup.py build_sphinx -b html
+sphinx-build-%{pyver} -b html doc/source doc/build/html
 # remove the sphinx-build-%{pyver} leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
