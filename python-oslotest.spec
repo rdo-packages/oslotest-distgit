@@ -80,6 +80,7 @@ Summary:        Documentation for the OpenStack test framework
 
 BuildRequires:  python%{pyver}-sphinx
 BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
 
 %description -n python-%{pypi_name}-doc
 %{common_desc} Documentation
