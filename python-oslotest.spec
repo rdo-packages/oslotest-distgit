@@ -17,7 +17,7 @@
 %global common_desc OpenStack test framework and test fixtures.
 
 Name:           python-%{pypi_name}
-Version:        3.7.1
+Version:        3.7.2
 Release:        1%{?dist}
 Summary:        OpenStack test framework
 
@@ -181,6 +181,9 @@ mv %{buildroot}%{_bindir}/oslo_debug_helper \
 %endif
 
 %changelog
+* Fri May 15 2020 RDO <dev@lists.rdoproject.org> 3.7.2-1
+- Update to 3.7.2
+
 * Fri Mar 08 2019 RDO <dev@lists.rdoproject.org> 3.7.1-1
 - Update to 3.7.1
 
