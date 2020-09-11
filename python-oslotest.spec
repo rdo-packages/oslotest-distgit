@@ -36,7 +36,6 @@ BuildRequires:  python3-setuptools
 
 # test requires
 BuildRequires:  python3-six
-BuildRequires:  python3-mock
 BuildRequires:  python3-stestr
 %if 0%{?repo_bootstrap} == 0
 BuildRequires:  python3-oslo-config
