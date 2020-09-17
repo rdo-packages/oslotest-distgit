@@ -22,6 +22,30 @@
       "revId": "c2066412b8de7dd2d37bf278e12e8dbaa1bed4ec",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7fa4a905_9cb4050e",
+        "filename": "python-oslotest.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-09-17T09:12:44Z",
+      "side": 0,
+      "message": "Ok will keep.",
+      "parentUuid": "a09907ba_c69d5a1b",
+      "range": {
+        "startLine": 49,
+        "startChar": 10,
+        "endLine": 49,
+        "endChar": 21
+      },
+      "revId": "c2066412b8de7dd2d37bf278e12e8dbaa1bed4ec",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
