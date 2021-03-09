@@ -58,9 +58,6 @@ Requires: python3-fixtures
 Requires: python3-six
 Requires: python3-subunit
 Requires: python3-testtools
-Requires: python3-mock
-
-
 %description -n python3-%{pypi_name}
 %{common_desc}
 
