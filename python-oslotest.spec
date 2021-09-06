@@ -13,8 +13,8 @@
 %global common_desc OpenStack test framework and test fixtures.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        4.5.0
+Release:        1%{?dist}
 Summary:        OpenStack test framework
 
 License:        ASL 2.0
@@ -117,3 +117,6 @@ python3 setup.py test
 %endif
 
 %changelog
+* Mon Sep 06 2021 RDO <dev@lists.rdoproject.org> 4.5.0-1
+- Update to 4.5.0
+
