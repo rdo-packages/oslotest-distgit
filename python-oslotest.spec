@@ -6,6 +6,7 @@
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
 
+%global repo_bootstrap 1
 %if 0%{?repo_bootstrap} == 0
 %global with_doc 1
 %else
