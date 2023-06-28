@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67472f68_c1fab92b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-06-28T11:53:01Z",
+      "side": 1,
+      "message": "\u003e Patch Set 3: Verified+1\n\u003e \n\u003e Build succeeded.\n\u003e https://review.rdoproject.org/zuul/buildset/09345cb407fd48bd9632b03d2ada5aa0\n\u003e \n\u003e - rdopkg-reqcheck https://review.rdoproject.org/zuul/build/e7ef59ccdf7848ea90c880b65c204580 : FAILURE in 2m 53s (non-voting)\n\u003e - rpmlint https://review.rdoproject.org/zuul/build/b6e7c5d7e6ae4bdf9a6fedd499dcf413 : SUCCESS in 1m 12s\n\u003e - weirdo-dlrn-master-packstack-scenario002-centos9 https://review.rdoproject.org/zuul/build/cc515c83a01447d3a98fdde831dff04a : SUCCESS in 28m 10s (non-voting)\n\u003e - weirdo-dlrn-master-puppet-scenario001-centos9 https://review.rdoproject.org/zuul/build/aaaf697b6cb04a71b74a0cbef409a113 : SUCCESS in 43m 55s (non-voting)\n\u003e - weirdo-dlrn-master-puppet-scenario003-centos9 https://review.rdoproject.org/zuul/build/f1845e2548724d6e9477cce0236d6733 : SUCCESS in 47m 58s (non-voting)\n\u003e - DLRN-rpmbuild-centos9 https://review.rdoproject.org/zuul/build/00e127b111d24ecaa882d6e1b25ef59f : SUCCESS in 5m 42s\n\u003e - DLRN-rpmbuild-centos9-compare-deps https://review.rdoproject.org/zuul/build/79e47074fbf046c0a3fb73ab1f983f5b : FAILURE in 2m 22s (non-voting)\n\u003e - DLRN-rpmbuild-centos9-compare-builddeps https://review.rdoproject.org/zuul/build/e1ce4772b56540f680a9fa6bcf18ca62 : FAILURE in 3m 17s (non-voting)\n\u003e - DLRN-rpmbuild-centos9-compare-files https://review.rdoproject.org/zuul/build/c2f93a55c0304365a198c43504f6d9e5 : FAILURE in 1m 49s (non-voting)\n\nwrt DLRN-rpmbuild-centos9-compare-files we don\u0027t have python-oslotest-doc in Trunk repo. DLRN might have enable repo_bootstrap when building it",
+      "revId": "6c372f33be441404b5cd0288c4f795568a61a681",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
