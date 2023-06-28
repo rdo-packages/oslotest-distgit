@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55b3358b_a784b58a",
+        "filename": "python-oslotest.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-06-28T13:45:27Z",
+      "side": 1,
+      "message": "i like this way",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 14
+      },
+      "revId": "3a320a7efa9751a785655b626b3fa9131c91c348",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
