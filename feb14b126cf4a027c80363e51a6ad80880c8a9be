@@ -22,6 +22,30 @@
       },
       "revId": "feb14b126cf4a027c80363e51a6ad80880c8a9be",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "726917fa_37ae3851",
+        "filename": "python-oslotest.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-06-28T12:01:00Z",
+      "side": 0,
+      "message": "Fixed in PS4",
+      "parentUuid": "54f7a7f7_5b63bec0",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 55,
+        "endChar": 6
+      },
+      "revId": "feb14b126cf4a027c80363e51a6ad80880c8a9be",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
