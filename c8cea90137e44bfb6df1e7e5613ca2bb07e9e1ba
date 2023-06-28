@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c2c9e3c_239227d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-06-28T13:16:02Z",
+      "side": 1,
+      "message": "Packages installed from Trunk \u003c \u003e Packages installed from patched distgit\n\u003e\tpython3-coverage-6.4.2-2.el9s.x86_64\nThere are differences between build deps with SRPM for patched and trunk\n\nLooks good, neither sphinx, openstackdocstheme nor oslo.config are required during the build",
+      "revId": "c8cea90137e44bfb6df1e7e5613ca2bb07e9e1ba",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
